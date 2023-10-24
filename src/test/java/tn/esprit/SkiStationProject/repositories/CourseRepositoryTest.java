@@ -37,4 +37,5 @@ public class CourseRepositoryTest {
         List<Course> courses = courseRepository.getcourbysupportskiettypecourcollectif_enfant(support, typeCourse);
         assertEquals(1, courses.size());
     }
+
 }
