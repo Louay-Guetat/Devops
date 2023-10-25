@@ -1,4 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: tn.esprit.SkiStationProject.services.CoursesServicesImplTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.123 s - in tn.esprit.SkiStationProject.services.CoursesServicesImplTest
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 4.007 s <<< FAILURE! - in tn.esprit.SkiStationProject.services.CoursesServicesImplTest
+testRetrieveAllCourses  Time elapsed: 0.003 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <2> but was: <3>
+	at tn.esprit.SkiStationProject.services.CoursesServicesImplTest.testRetrieveAllCourses(CoursesServicesImplTest.java:30)
+
+testUpdateCourse  Time elapsed: 3.98 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <tn.esprit.SkiStationProject.entities.Course@34d6e9a4> but was: <tn.esprit.SkiStationProject.entities.Course@9423344>
+	at tn.esprit.SkiStationProject.services.CoursesServicesImplTest.testUpdateCourse(CoursesServicesImplTest.java:55)
+

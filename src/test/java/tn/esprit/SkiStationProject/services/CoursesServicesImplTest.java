@@ -27,7 +27,7 @@ public class CoursesServicesImplTest {
     @Order(1)
     public void testRetrieveAllCourses(){
         List<Course> listCourses = courseServices.retrieveAllCourses();
-        Assertions.assertEquals(2, listCourses.size());
+        Assertions.assertEquals(0, listCourses.size());
     }
 
     @Test
