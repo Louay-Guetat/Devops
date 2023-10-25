@@ -62,6 +62,15 @@
                     </excludes>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>8.9.7</version>
+                <configuration>
+                    <sonar.login>admin</sonar.login>
+                    <sonar.password>Louay1998</sonar.password>
+                </configuration>
+            </plugin>
         </plugins>
         <finalName> devops-integration </finalName>
     </build>
