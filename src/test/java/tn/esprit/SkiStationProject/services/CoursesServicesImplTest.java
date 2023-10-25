@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.junit.jupiter.api.Order;
@@ -16,6 +18,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import tn.esprit.SkiStationProject.entities.Course;
 import tn.esprit.SkiStationProject.entities.enums.Support;
 import tn.esprit.SkiStationProject.entities.enums.TypeCourse;
+import tn.esprit.SkiStationProject.repositories.CourseRepository;
 
 @SpringBootTest
 @TestMethodOrder(OrderAnnotation.class)
@@ -23,11 +26,17 @@ public class CoursesServicesImplTest {
     @Autowired
     ICourseServices courseServices;
 
+    @Autowired
+    CourseRepository courseRepository;
+
     @Test
     @Order(1)
     public void testRetrieveAllCourses(){
+        long rowCount = courseRepository.count();
+
         List<Course> listCourses = courseServices.retrieveAllCourses();
-        Assertions.assertEquals(0, listCourses.size());
+
+        Assertions.assertEquals(rowCount, listCourses.size());
     }
 
     @Test
