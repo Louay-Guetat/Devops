@@ -118,7 +118,6 @@ public class RegistrationServicesImpl implements  IRegistrationServices{
                 .filter(course -> course.getSupport().equals(support))
                 .map(Course::getRegistrations)
                 .flatMap(Collection::stream)
-               // .map(Registration::getNumWeek)
                 .collect(Collectors.groupingBy(
                         Registration::getCourse,
                         Collectors.mapping(Registration::getNumWeek, Collectors.toList())
