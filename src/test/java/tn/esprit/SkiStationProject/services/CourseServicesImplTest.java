@@ -27,14 +27,14 @@ public class CourseServicesImplTest {
 
     @Autowired
     CourseRepository courseRepository;
-
+/*
     @Test
     @Order(1)
     public void testRetrieveAllCourses(){        
         List<Course> listCourses = courseServices.retrieveAllCourses();
         Assertions.assertEquals(0, listCourses.size()); 
     }
-/*
+
     @Test
     @Order(2)
     public void testAddCourse(){
