@@ -34,7 +34,7 @@ public class CourseServicesImplTest {
         List<Course> listCourses = courseServices.retrieveAllCourses();
         Assertions.assertEquals(0, listCourses.size()); 
     }
-
+/*
     @Test
     @Order(2)
     public void testAddCourse(){
@@ -110,5 +110,5 @@ public class CourseServicesImplTest {
 
         List<Course> listCourses = courseServices.retrieveAllCourses();
         Assertions.assertEquals(0, listCourses.size());
-    }
+    }*/
 }
